@@ -1,0 +1,136 @@
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+*.so
+
+# =============================================================================
+# Virtual Environment
+# =============================================================================
+airflow-env/
+venv/
+.venv/
+env/
+ENV/
+
+# =============================================================================
+# Airflow runtime files
+# =============================================================================
+# SQLite metadata database (use a proper DB in production)
+AIRFLOW_HOME/airflow.db
+
+# Airflow config (contains secrets; each developer sets up their own)
+AIRFLOW_HOME/airflow.cfg
+
+# Webserver PID file
+AIRFLOW_HOME/airflow-webserver.pid
+
+# Scheduler heartbeat / pickle files
+AIRFLOW_HOME/airflow-scheduler.pid
+AIRFLOW_HOME/*.pid
+
+# Logs (runtime output, not source code)
+# AIRFLOW_HOME/logs/
+
+# Airflow plugins cache
+AIRFLOW_HOME/plugins/
+
+# Airflow webserver key
+webserver_config.py
+standalone_admin_password.txt
+
+# =============================================================================
+# Generated DAG files
+# (source of truth is src/templates/ — generate with generate_dags.py)
+# =============================================================================
+# AIRFLOW_HOME/dags/
+src/dags/
+
+# =============================================================================
+# Data files
+# (large binary files — store in object storage or DVC instead)
+# =============================================================================
+data/datasets/**/*.parquet
+data/datasets/train.parquet
+data/datasets/test.parquet
+
+# =============================================================================
+# Great Expectations runtime artifacts
+# =============================================================================
+great_expectations/uncommitted/
+.great_expectations/
+
+# =============================================================================
+# Jupyter Notebooks
+# =============================================================================
+.ipynb_checkpoints/
+*.ipynb
+
+# =============================================================================
+# Environment variables / secrets
+# =============================================================================
+.env
+.env.*
+*.secret
+secrets/
+credentials/
+
+# =============================================================================
+# IDE and editor files
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# =============================================================================
+# OS generated files
+# =============================================================================
+Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# =============================================================================
+# Testing and coverage
+# =============================================================================
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# =============================================================================
+# MyPy / type checkers
+# =============================================================================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# =============================================================================
+# Temporary files
+# =============================================================================
+*.tmp
+*.bak
+*.orig
+*.log
